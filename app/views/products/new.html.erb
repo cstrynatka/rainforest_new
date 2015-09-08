@@ -1,0 +1,23 @@
+<h1>New product</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', products_path %>
+
+<%= form_for @product do |t| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :description %><br>
+		<%= f.text_field :description %>
+	</p>
+	<p>
+		<%= f.label :price_in_cents %><br>
+		<%= f.text_field :price_in_cents%>
+	</p>
+	<p>
+		<%= f.submit "Save" %>
+	</p>
+<% end %>
